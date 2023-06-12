@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="./style.css"><!-- Main CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"><!-- Boxicons CSS -->
+    
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <!-- End Google Font API -->
+
+    <title>Autolux.md | Principala</title>
+
+</head>
+
+<body>
+
+<main>
+
+    <header><!-- Start header section -->
+        <div class="logoContainer">
+            <a href="#" target="_blank"><img id="logoImg" src="../assets/images/logo.png" alt="logotip"></a>
+        </div>
+        <div class="navbarBtnContainer">
+            <a href="" target="_blank">Acasă</a>
+            <a href="" target="_blank">Servicii</a>
+            <a href="" target="_blank">Noutăți</a>
+            <a href="" target="_blank">Promoții</a>
+            <a href="" target="_blank">Contacte</a>
+        </div>
+        <div id="navbarRightBtn" class="navbarBtnContainer">
+            <a id="navbarBtn" href="" target="_blank"><i class='bx bx-message-square-dots'></i></a>
+            <a id="navbarBtn" href="" target="_blank"><i class='bx bx-cart'></i></a>
+            <a id="navbarBtn" href="login.html" target="_blank"><i class='bx bx-user'></i></a>
+        </div>
+    </header>
+    <!-- End header section -->
+
+    <section class="hero"><!-- Start Hero section -->
+        <div class="heroImgContainer">
+            <div class="slideshow-container">
+                <div class="heroSlider fade">
+                  <img src="../assets/images/hero-slider/slider_1.png">
+                </div>
+                
+                <div class="heroSlider fade">
+                  <img src="../assets/images/hero-slider/slider_2.jpg">
+                </div>
+                
+                <div class="heroSlider fade">
+                  <img src="../assets/images/hero-slider/slider_3.png">
+                </div>   
+            </div>
+            <h1>Cel mai larg catalog de autobuze din Moldova!</h1>
+            <button id="heroBtn"><a href="" target="_blank">Vezi conținutul</a></button>         
+        </div>    
+    </section>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+    <section class="brands">
+        <h1>Brandurile noastre</h1>
+        <div class="slider">
+            <div class="slider-row"></div>
+        </div>
+    </section>
+    <!-- End Hero section -->
+
+    <!-- Start Footer Section -->
+
+    <footer>
+        
+    </footer>
+
+    <!-- End Footer Section -->
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("heroSlider");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+        
+</body>
+
+</html>

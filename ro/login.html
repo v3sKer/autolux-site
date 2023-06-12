@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"><!-- Boxicons CSS -->
+    
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet"><!-- End Google Font API -->
+    <title>Autolux.md | Login</title>
+
+    <style>
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        *{
+            font-family: Inter, Montserrat,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body{
+            background-color: #e1e1e1;
+            animation: fadeIn 2s;
+        }
+
+        main{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label{
+            margin: 0 0 0 0.5em;
+        }
+
+        .loginForm {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 12px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            width: 25em;
+            padding-bottom: 2em;
+        }
+
+        .loginForm input {
+            border: #e2e2e2 1px solid;
+            border-radius: 6px;
+            height: 2em;
+            width: 25em;
+            padding: 0.2em 0.4em;
+            margin: 0.5em;
+        }
+
+        #checkboxContainer {
+            display: flex;
+            align-items: center;
+            margin: 0 0 0 -0.35em;
+        }
+
+        #inputCheckbox {
+            width: 1em;
+            margin: 1em 0 1em 1em;
+        }
+
+        #inputSubmit {
+            color: #fff;
+            background-color: #6e6e6e;
+            width: 6em;
+            height: 3em;
+            transition: .5s ease;
+            cursor: pointer;
+        }
+
+        #inputSubmit:hover {
+            background-color: rgb(0, 102, 255);
+            scale: 110%;
+        }
+
+        #forgotData {
+            font-size: 12px;
+            color: #b6b6b6;
+            transition: .5s ease;
+        }
+
+        #forgotData:hover {
+           color: #0066ff; 
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <main>
+        <div class="loginForm">
+            <img src="../assets/images/logo.png" alt="logotip" style="width: 15em; margin: 2em;">
+            <h3 style="color: #000;margin-bottom: 1.5em;">Logare în cont</h3>
+            <form>
+                <label for="login">Introduceți login-ul Dvs.</label><br>
+                <input type="text" name="login" id="inputLogin" placeholder="Login.."><br><br>
+
+                <label for="password">Introduceți parola Dvs.</label><br>
+                <input type="password" name="pass" id="inputPass" placeholder="Parola.."><br>
+
+                <div id="checkboxContainer">
+                    <input type="checkbox" name="rememberUser" id="inputCheckbox">
+                    <label for="rememberUser">Memorizați utilizatorul</label><br>
+                </div>
+                
+                <div style="display: flex;justify-content: center;"><input type="submit" value="Logare" id="inputSubmit"></div><br>
+
+                <div style="display: flex;justify-content: center;">
+                    <a style="text-decoration: none;" href="#" target="_blank"><p id="forgotData">Am uitat datele de intrare</p></a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
