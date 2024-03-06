@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"><!-- Boxicons CSS -->    
+    
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+
+    <title>Autolux sărbătorește 10 ani!</title>
+
+    <style>
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Inter, Montserrat, Helvetica, Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #e1e1e1;
+            animation: fadeIn 1s;
+            display: flex;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: auto;
+            width: 70%;
+        }
+
+        #short-hr {
+            width: 5em;
+            margin: .5em;
+            margin-left: .8em;
+        }
+
+
+        /* Start Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
+            background-color: #fff;
+            border-radius: 12px;
+            margin: 24px auto 8px auto;
+
+            padding: 12px;
+        }
+
+        .logoContainer {
+            width: 10%;
+        }
+
+        #logoImg {
+            width: 100%;
+            margin: 8px;
+            transition: .3s ease;
+        }
+
+        #logoImg:hover {
+            scale: 105%;
+        }
+
+        .navbarBtnContainer {
+            display: flex;
+        }
+
+        .navbarBtnContainer a {
+            text-decoration: none;
+            color: #6e6e6e;
+            padding: 12px;
+            transition: .5s;
+        }
+
+        .navbarBtnContainer a:hover {
+            color: #0066ff;
+        }
+
+        #navbarRightBtn i {
+            color: #dcdcdc;
+            scale: 250%;
+            transition: .3s ease;
+        }
+
+        #navbarRightBtn i:hover {
+            color: #0066ff;
+        }
+
+        #navbarBtn {
+            margin: 0px 12px;
+        }
+        /* End header section */
+
+
+        /* Subnav section */
+        .subnav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding: .3em;
+            background-color: #fff;
+            height: 1.5em;
+            width: 19em;
+            border-radius: 1em;
+            margin-bottom: 8px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+        }
+
+        .subnav a {
+            transition: .3s ease;
+            color: #909090;
+            text-decoration: none;
+            margin-left: .1em;
+            cursor: pointer;
+        }
+
+        .subnav a:hover {color: #000;}
+
+        .subnav i {
+            color: #909090;
+            font-size: 16px;
+            padding: 2px;
+        }
+
+        .subnav p {
+            color: #000;
+            font-size: 16px;
+        }
+        /* End subnav section */
+
+
+        /* Main section */
+
+        .main-container {
+            display: flex;
+            background-color: fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+            width: 100%;
+            min-height: 30em;
+            background-color: #fff;
+            margin-bottom: 24px;
+        }
+
+        .main-container img {
+            border-radius: 12px 0 0 12px;
+            height: 100%;
+            width: 30em;
+            border-right: #0066ff 4px solid;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content h1 {
+            padding: 1em 2em .5em;
+        }
+
+        .main-content p {
+            padding: 0 15em 0 3em;
+        }
+
+        #main-content-author p {
+            color: #898989;
+            font-size: 12px;
+            padding: 0 4em;
+        }
+
+        /* End main section */
+
+
+        /* Footer Section */
+        .footerFormContainer {
+            background: url(../../assets/images/banner_footer.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: row;
+            height: 15em;
+            border-radius: 12px 12px 0px 0px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            margin-top: 24px;
+        }
+
+        #footerBanner {
+            border-radius: 12px 12px 0 0;
+            z-index: 1;
+        }
+
+        .footerForm {
+            display: flex;
+            flex-direction: column;
+            margin: 2em 7em;
+        }
+
+        .footerForm h1 {
+            color: #fff;
+        }
+
+        .footerForm input {
+            height: 1em;
+            width: 15em;
+            border: #e2e2e2 1px solid;
+            border-radius: 8px;
+            padding: 1em;
+            margin: 1em 1em 1em 0;
+        }
+
+        #footerFormBtn {
+            background-color: #6e6e6e;
+            border: none;
+            padding: 16px 0px;
+            border-radius: 12px;
+            transition: .5s ease;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+            width: 6em;
+            height: 3em;
+            line-height: 0em;
+            margin-top: 1em;
+        }
+
+        #footerFormBtn:hover {
+            scale: 105%;
+            background-color: #0066ff;
+            box-shadow: 0 0 4px 0 rgba(00, 66, ff,  1);
+        }
+
+        #footerFormBtn a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .footerMain {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .footerMainColumn {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footerMainColumn a {
+            color: #dcdcdc;
+            text-decoration: none;
+            margin: 0.33em 0;
+            transition: .2s ease;
+        }
+
+        .footerMainColumn p {font-size: 16px;}
+
+        .footerMainColumn p, i {
+            color: #dcdcdc;
+            transition: .3s ease;
+        }
+
+        .footerMainColumn a:hover {
+            color: #0066ff;
+        }
+
+        .footerMainColumn hr {
+            border: #666 1px solid;
+            margin: 1em 0;
+        }
+
+        #footerSocialLinks {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #footerSocialLinks i {
+            color: #dcdcdc;
+            font-size: 32px;
+            transition: .3 ease;
+        }
+
+        #footerSocialLinks i:hover {
+            color: #0066ff;
+        }
+
+        #footerLogo{
+            width: 15em;
+        }
+
+        #footer-copyright {
+            background-color: #1a1a1a; 
+            display: block; 
+            text-align: center; 
+            color: #707070;
+            padding: 1em;
+            font-size: 10px;
+        }
+
+        #footer-copyright a {
+            color: #0066ff;
+            text-decoration: none;
+        }
+        /* End Footer Section */
+    </style>
+</head>
+
+<body>
+<main>
+
+    <!-- Header -->
+    <header>
+        <div class="logoContainer">
+            <a href="../index.html"><img id="logoImg" src="../../assets/images/logo.png" alt="logotip"></a>
+        </div>
+        <div class="navbarBtnContainer">
+            <a href="../index.html">Home</a>
+            <a href="../catalog.html">Catalog</a>
+            <a href="../services.html">Servicii</a>
+            <a href="../news.html">Noutăți</a>
+            <a href="../contacte.html">Contacte</a>
+        </div>
+        <div id="navbarRightBtn" class="navbarBtnContainer">
+            <a id="navbarBtn" href=""><i class='bx bx-message-square-dots'></i></a>
+            <a id="navbarBtn" href=""><i class='bx bx-cart'></i></a>
+            <a id="navbarBtn" href="../login.html"><i class='bx bx-user'></i></a>
+        </div>
+    </header><!-- End header section -->
+
+    <!-- Subnav -->
+    <div class="subnav">
+        <a href="../index.html"><p>Acasă <i class='bx bxs-chevron-right'></i></a><a href="../news.html">Noutăți <i class='bx bxs-chevron-right'></i></a> Livrari din Asia</p>
+    </div><!-- End subnav section -->
+
+
+    <!-- Main content -->
+    <section class="main-container">
+        <img src="../../assets/images/news/news_asia_420x420.png" alt="">
+        <div class="main-content">
+            <h1>Livrări acum și din Asia!</h1>
+            <span id="main-content-author"><p>Autor: Gînga Daniil</p></span>
+            <hr style="margin: 1em 3em;" id="short-hr">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum maximus urna egestas lacinia. 
+                Nunc scelerisque fringilla neque, sed fringilla odio. Nullam vitae nibh feugiat, scelerisque eros egestas, 
+                efficitur sapien. 
+                <br><br>Pellentesque congue vel felis sed hendrerit. Pellentesque id dolor sed arcu tristique 
+                vehicula quis at leo. Cras non porttitor sapien, feugiat egestas arcu. In pulvinar auctor felis eu convallis. 
+                Quisque tristique turpis in risus sagittis, ac lobortis sapien venenatis. In rutrum quam ut ligula facilisis, 
+                non posuere ipsum vehicula. Pellentesque leo eros, sollicitudin in nunc in, sagittis mattis ex. 
+                
+                <br><br>Morbi egestas risus ligula, sit amet 
+                imperdiet leo congue vel. Etiam porta sit amet nisl eget semper. Maecenas faucibus aliquam bibendum. 
+                Fusce a viverra ipsum. Proin in sollicitudin metus. Nunc sed odio gravida est porttitor maximus. 
+                Sed interdum est quis finibus pulvinar. Ut in leo eu dui mattis tristique nec ac urna. Vivamus 
+                efficitur ornare dignissim. Vivamus id risus in ante finibus lacinia. Donec ut metus in eros viverra 
+                eleifend. Nam blandit semper velit, in egestas lorem efficitur et.</p>
+        </div>
+    </section><!-- End main content -->
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footerFormContainer">
+            <form class="footerForm">
+                <h1>Nu ai găsit ceea ce cauți?<br>Lasă-ți contactele mai jos și te sunăm înapoi!</h1>
+                <span style="display: flex;flex-wrap: wrap;">
+                    <input type="text" id="nameInput" placeholder="Nume">
+                    <input type="text" id="emailInput" placeholder="Email">
+                    <input type="number" id="numberInput" placeholder="Nr. telefon">
+                    <button id="footerFormBtn"><a href="" target="_blank">Trimite</a></button>    
+                </span>
+            </form>
+        </div>
+        <div class="footerMain">
+            <div class="footerMainColumn">
+                <img id="footerLogo" src="../../assets/images/logo-white.png" alt="logotip"><hr>
+                <span id="footerSocialLinks">
+                    <a href="https://www.facebook.com/autoluxmoldova/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/autolux.car.park/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.tiktok.com/@autolux.car.park" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://ok.ru/profile/597495570450" target="_blank"><i class='bx bxl-ok-ru'></i></a>
+                    <a href="https://www.youtube.com/channel/UCYIwPljY7uhhegQ9pIZR9qQ" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </span>
+            </div>
+            <div class="footerMainColumn">
+                <a href="../index.html">Home</a>
+                <a href="../catalog.html">Catalog</a>
+                <a href="../services.html">Servicii</a>
+                <a href="../news.html">Noutăți</a>
+                <a href="../contacte.html">Contacte</a>
+                <a href="">Politica de<br>confidențialitate</a>
+            </div>
+            <div class="footerMainColumn">
+                <p><i class='bx bxs-map'></i> Adresa: <a href="">Chișinău, sec. Buiucani,<br>str. Alba Iulia 75/18</a></p><br>
+                <p><i class='bx bxs-phone'></i> Telefon: <a href="tel:079-014-111">079 014 111</a></p>
+                <hr>
+                <p><i class='bx bxs-map'></i> Adresa: <a href="">Chișinău, str. Petricani 88/4</a></p><br>
+                <p><i class='bx bxs-phone'></i> Telefon: <a href="tel:079-014-111">079 600 033</a></p>
+            </div>
+            <div class="footerMainColumn">
+                <img src="../../assets/images/autolux_map_min.jpeg" alt="" style="width: 21em;border-radius: 16px;">
+            </div>
+        </div>
+        <span id="footer-copyright">
+            <p style="font-size: 12px;">© Autolux.md - NonCopyright 2023 | Developed by <a href="https://v3sker.com/" target="_blank">v3sker</a>.</p>
+        </span>
+    </footer><!-- End Footer Section -->
+</main>
+</body>
+
+</html>

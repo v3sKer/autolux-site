@@ -1,4 +1,4 @@
-$bgColor: #e1e1e1;
+$bgColor: #eee;
 $blockColor: #fff;
 $gray: rgb(110, 110, 110);
 $hoverColor: #0066ff;
@@ -17,13 +17,13 @@ $hoverColor: #0066ff;
 
 html, body {
     height: 100%;
-    overflow: hidden;
 }
 
 body {
     background-color: $bgColor;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
     display: flex;
+    align-items: flex-start;
 }
 
 main {
@@ -35,11 +35,11 @@ main {
 }
 
 /* Start header section */
-
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: 0px 0px 10px 0px rgba($color: #000, $alpha: 0.1);
     background-color: $blockColor;
     border-radius: 12px;
@@ -69,7 +69,7 @@ header {
     text-decoration: none;
     color: $gray;
     padding: 12px;
-    transition: .5s;
+    transition: .3s ease;
 }
 
 .navbarBtnContainer a:hover {
@@ -77,7 +77,13 @@ header {
 }
 
 #navbarRightBtn i {
+    color: #dcdcdc;
     scale: 250%;
+    transition: .5s ease;
+}
+
+#navbarRightBtn i:hover {
+    color: #0066ff;
 }
 
 #navbarBtn {
@@ -196,6 +202,183 @@ header {
 
 /* End Hero sections */
 
+
+/* Start Benefits Sections */
+
+.benefits {
+    background-color: $blockColor;
+    border-radius: 12px;
+    margin: 24px 0;
+    box-shadow: 0 0 10px 0 rgba($color: #000, $alpha: 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits h1 {
+    padding: 24px;
+    font-size: 28px;
+}
+
+.benefitsRow {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.benefitsItem {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 12px;
+    border: #e7e7e7 2px solid;
+    width: 25em;
+    height: 15em;
+    margin-bottom: 48px;
+}
+
+#benefitsItemContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#benefitsItemContent i {
+    color: #0066ff;
+    font-size: 48px;
+    display: inline;
+} 
+
+.benefitsItem h4 {
+    display: inline-block;
+}
+
+#benefitsItemContentTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 1em 0;
+    color: #000;
+    display: flex;
+}
+/* */
+
+
+/* Start Footer Section */
+
+.footerFormContainer {
+    background: url(../assets/images/banner_footer.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    height: 15em;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0 0 10px 0 rgba($color: #000, $alpha: 0.3);
+    margin-top: 24px;
+}
+
+#footerBanner {
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+.footerForm {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 7em;
+}
+
+.footerForm h1 {
+    color: #fff;
+}
+
+.footerForm input {
+    height: 3em;
+    width: 15em;
+    border: #e2e2e2 1px solid;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 1em 1em 0;
+}
+
+#footerFormBtn {
+    background-color: $gray;
+    border: none;
+    padding: 16px 0px;
+    border-radius: 12px;
+    transition: .5s ease;
+    box-shadow: 0 0 4px 0 rgba($color: #000, $alpha: 0.5);
+    width: 6em;
+    height: 3em;
+    line-height: 0em;
+    margin-top: 1em;
+}
+
+#footerFormBtn:hover {
+    scale: 105%;
+    background-color: #0066ff;
+    box-shadow: 0 0 4px 0 rgba($color: $hoverColor, $alpha: 1)
+}
+
+#footerFormBtn a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footerMain {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footerMainColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerMainColumn a {
+    color: #dcdcdc;
+    text-decoration: none;
+    margin: 0.33em 0;
+    transition: .2s ease;
+}
+
+.footerMainColumn p, i {
+    color: #dcdcdc;
+    transition: .2s ease;
+}
+
+.footerMainColumn a:hover {
+    color: #0066ff;
+}
+
+.footerMainColumn hr {
+    border: #666 1px solid;
+    margin: 1em 0;
+}
+
+#footerSocialLinks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footerSocialLinks i {
+    color: #dcdcdc;
+    font-size: 32px;
+}
+
+#footerLogo{
+    width: 15em;
+}
+
+/* End Footer Section */
+
+
+
 /* Slider Module */
 
 $img-w: 5912px;
@@ -213,7 +396,7 @@ $speed: 50s;
 .slider-row {
     width: $img-w * $ratio;
     height: $img-h * $ratio;
-    background-image: url(../assets/images/slider.jpg);
+    background-image: url(../assets/images/slider.png);
     background-size: $img-w * $ratio $img-h * $ratio;
     animation: slide $speed linear infinite;    
 }
@@ -224,9 +407,5 @@ $speed: 50s;
 }
 
 /* End Slider Module */
-
-/* --- */
-
-/* Hero Slider Module */
 
 
