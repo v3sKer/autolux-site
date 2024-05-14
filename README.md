@@ -5,6 +5,6 @@ Used references for this template: [autolux.md](https://autolux.md/), [avtolux.m
 
 ## Instalation
 
-- Download source code via green 'Code' button above, ore by cloning this repo:
+- Download source code via green 'Code' button above, or by cloning this repo:
   <br>`git clone https://github.com/v3sKer/autolux-site.git`
 - Open `index.html` in the downloaded/cloned folder using any modern browser.
